@@ -1,0 +1,90 @@
+html,body{
+	margin:0;
+	padding:0;
+	width:100%;
+}
+h1,p,ul,li{
+    margin: 0;
+    padding: 0;
+}
+h1,h2{
+	text-align:center;
+}
+a{
+	text-decoration:none;
+	color:hsl(0,0%,0%);
+	transition:color 0.2s linear;
+}
+a:hover{
+	text-decoration:underline;
+	color:#727D53;
+}
+ul,li{
+	list-style: none;
+}
+body{
+	font-family: Arial, Helvetica, sans-serif;
+	font-size:16px;
+	line-height:1.5;
+}
+#header{
+	background: hsl(9, 44%, 73%);
+	padding:16px;
+}
+#logo > img{
+	width:110px;
+}
+#logo > div{
+	display:inline-block;
+    -webkit-transform: translate(0, -50%);
+            transform: translate(0, -50%);
+}
+#navHeader{
+	float:right;
+}
+#navHeader li{
+	display:inline-block;
+	padding:0 8px;
+	transition:color 0.2s linear;
+}
+#navHeader li:hover{
+
+}
+#slideshow{
+    padding:12px 0;
+}
+#slideshow > img{
+	display:block;
+    max-width:803px;
+    margin:0 auto;
+}
+#intro{
+	max-width:900px;
+	margin:0 auto;
+}
+#aboutUs{
+	max-width:900px;
+	margin:0 auto;
+	padding:12px 0;
+}
+#aboutUs > img{
+	display:block;
+	max-width: 702px;
+	margin:0 auto;
+}
+#contactUs{
+	max-width:900px;
+	margin:0 auto;
+	padding:12px 0;
+	text-align:center;
+}
+#contactUs > img{
+	display:block;
+	max-width: 750px;
+	margin:0 auto;
+}
+#contactUs > .contactCol{
+	display:inline-block;
+	width:33%;
+	text-align:left;
+}
