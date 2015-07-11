@@ -3,7 +3,7 @@ html,body{
 	padding:0;
 	width:100%;
 }
-h1,p,ul,li{
+h1,p,ul,li,fieldset{
     margin: 0;
     padding: 0;
 }
@@ -85,6 +85,17 @@ body{
 }
 #contactUs > .contactCol{
 	display:inline-block;
-	width:33%;
+	width:100%;
 	text-align:left;
+  vertical-align:top;
+}
+label{
+  font-size: 12px;
+}
+fieldset,input,textarea{
+  border:none;
+}
+input,textarea{
+  background-color: hsl(0, 0%, 33%);
+  width:100%;
 }
