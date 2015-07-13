@@ -13,11 +13,12 @@ h1,h2{
 a{
 	text-decoration:none;
 	color:hsl(0,0%,0%);
-	transition:color 0.2s linear;
+	transition:background 0.2s linear;
 }
 a:hover{
-	text-decoration:underline;
-	color:#727D53;
+	/* text-decoration:underline; */
+	background:hsl(103, 56%, 26%);
+  color:hsl(0,0%,100%);
 }
 ul,li{
 	list-style: none;
@@ -28,8 +29,8 @@ body{
 	line-height:1.5;
 }
 #header{
-	background: hsl(9, 44%, 73%);
-	padding:16px;
+	background: hsl(9, 44%, 83%);
+	padding:24px;
 }
 #logo > img{
 	width:110px;
@@ -51,7 +52,7 @@ body{
 
 }
 #slideshow{
-    padding:12px 0;
+    padding:24px 0;
 }
 #slideshow > img{
 	display:block;
@@ -65,17 +66,37 @@ body{
 #aboutUs{
 	max-width:900px;
 	margin:0 auto;
-	padding:12px 0;
+	padding:24px 0;
 }
 #aboutUs > img{
 	display:block;
 	max-width: 702px;
 	margin:0 auto;
 }
+#examples{
+  background: hsl(9, 44%, 83%);
+  padding:24px;
+  text-align:center;
+  font-size:20px;
+}
+#examples li{
+  display:inline-block;
+  width:240px;
+  height:240px;
+  margin:24px;
+  background:hsla(0,0%,0%,0.3);
+}
+#examples > a{
+  padding: 12px 48px;
+  display: inline-block;
+  border: 2px solid hsl(103, 56%, 26%);
+  text-transform: uppercase;
+  border-radius: 5px;
+}
 #contactUs{
 	max-width:900px;
 	margin:0 auto;
-	padding:12px 0;
+	padding:24px 0;
 	text-align:center;
 }
 #contactUs > img{
@@ -86,8 +107,14 @@ body{
 #contactUs > .contactCol{
 	display:inline-block;
 	width:100%;
-	text-align:left;
+	/* text-align:left; */
   vertical-align:top;
+}
+.contactCol > ul{
+  margin-bottom:24px;
+}
+#facebook{
+  width:64px;
 }
 label{
   font-size: 12px;
