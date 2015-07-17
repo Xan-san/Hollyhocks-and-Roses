@@ -8,7 +8,7 @@ h1,p,ul,li,fieldset{
     padding: 0;
 }
 h1,h2{
-	text-align:center;
+	/* text-align:center; */
 }
 a{
 	text-decoration:none;
@@ -27,26 +27,29 @@ body{
 	font-family: Arial, Helvetica, sans-serif;
 	font-size:16px;
 	line-height:1.5;
+  text-align:center;
+  font-weight:bold;
 }
 #header{
 	background-color: hsl(9, 100%, 90%);
 	padding:24px;
+  /* text-align:center; */
+  /* font-weight:bold; */
+}
+#logo{
+  display:inline-block;
+  margin-bottom:24px;
 }
 #logo > img{
-	width:110px;
-}
-#logo > div{
-	display:inline-block;
-    -webkit-transform: translate(0, -50%);
-            transform: translate(0, -50%);
-}
-#navHeader{
-	float:right;
+  display:block;
+  margin:0 auto;
+	width:125px;
 }
 #navHeader li{
 	display:inline-block;
 }
 #navHeader a{
+  display:block;
   padding:12px 15px;
   transition:background-color 0.2s linear;
   border-radius:5px;
@@ -55,7 +58,7 @@ body{
   background-color:hsl(95, 49%, 36%);
 }
 #slideshow{
-    padding:24px 0;
+  padding:24px 0;
 }
 #slideshow > img{
 	display:block;
@@ -79,8 +82,8 @@ body{
 #examples{
   background-color: hsl(9, 100%, 90%);
   padding:24px;
-  text-align:center;
-  font-size:20px;
+  /* text-align:center; */
+  /* font-size:20px; */
 }
 #examples li{
   display:inline-block;
@@ -95,6 +98,7 @@ body{
   border: 2px solid hsl(103, 56%, 26%);
   text-transform: uppercase;
   border-radius: 5px;
+  background-color:hsl(0,0%,100%);
   transition: background-color 0.2s linear;
 }
 #examples > a:hover{
@@ -104,7 +108,7 @@ body{
 	max-width:900px;
 	margin:0 auto;
 	padding:24px 0;
-	text-align:center;
+	/* text-align:center; */
 }
 #contactUs > img{
 	display:block;
@@ -116,6 +120,7 @@ body{
 	width:100%;
 	/* text-align:left; */
   vertical-align:top;
+  font-weight:normal;
 }
 .contactCol > ul{
   margin-bottom:24px;
@@ -132,4 +137,20 @@ fieldset,input,textarea{
 input,textarea{
   background-color: hsl(0, 0%, 33%);
   width:100%;
+}
+/*Break point*/
+@media (min-width: 520px){
+#logo > img{
+  display:inline-block;
+}
+#logo > div{
+  display:inline-block;
+  -webkit-transform: translate(0, -50%);
+          transform: translate(0, -50%);
+}
+}
+@media (min-width: 1015px) {
+#navHeader{
+  float:right;
+}
 }
