@@ -32,21 +32,26 @@ body{
 }
 #header{
 	background-color: hsl(9, 100%, 90%);
-	padding:24px;
+	padding:12px;
   /* text-align:center; */
   /* font-weight:bold; */
 }
 #logo{
   display:inline-block;
-  margin-bottom:24px;
+ /*  margin-bottom:24px; */
 }
 #logo > img{
-  display:block;
+  display:none;
   margin:0 auto;
-	width:125px;
+	width:75px;
 }
-#navHeader li{
-	display:inline-block;
+#logo > div{
+  display:inline-block;
+  padding:12px;
+  background-image:url("images/Hollyhocks and Roses Logo.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
 }
 #navHeader a{
   display:block;
@@ -54,16 +59,21 @@ body{
   transition:background-color 0.2s linear;
   border-radius:5px;
 }
-#navHeader a:hover{
+#navHeader a:hover,#navHeader a:active{
   background-color:hsl(95, 49%, 36%);
 }
 #slideshow{
+  height:100%;
   padding:24px 0;
+  background-image:url("images/slideshow.jpeg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 #slideshow > img{
 	display:block;
-    max-width:803px;
-    margin:0 auto;
+  max-width:803px;
+  margin:0 auto;
 }
 #intro{
 	max-width:900px;
@@ -139,18 +149,28 @@ input,textarea{
   width:100%;
 }
 /*Break point*/
-@media (min-width: 520px){
-#logo > img{
+/*Added +30px to compensate for scrollbar width*/
+@media (min-width: 550px){
+/* #logo > img{
   display:inline-block;
-}
+} */
 #logo > div{
   display:inline-block;
-  -webkit-transform: translate(0, -50%);
-          transform: translate(0, -50%);
+  /* -webkit-transform: translate(0, -50%);
+          transform: translate(0, -50%); */
 }
 }
-@media (min-width: 1015px) {
+@media (min-width: 775px) {
+#header{
+  text-align:left;
+}
+#logo > div{
+  padding:0;
+}
 #navHeader{
   float:right;
+}
+#navHeader li{
+  display:inline-block;
 }
 }
