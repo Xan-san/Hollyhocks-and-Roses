@@ -33,7 +33,7 @@ body{
 #header{
 	background-color: hsl(9, 100%, 90%);
 	padding:12px;
-  /* text-align:center; */
+  text-align:left;
   /* font-weight:bold; */
 }
 #logo{
@@ -47,11 +47,35 @@ body{
 }
 #logo > div{
   display:inline-block;
-  padding:12px;
+  /* padding:12px; */
   background-image:url("images/Hollyhocks and Roses Logo.png");
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
+}
+#menuButton{
+  float:right;
+  padding:12px 15px;
+  display: inline-block;
+  border: 2px solid hsl(103, 56%, 26%);
+  text-transform: uppercase;
+  border-radius: 5px;
+  cursor:pointer;
+}
+#menuButton:hover{
+
+}
+#navHeader{
+  display:none;
+  text-align:center;
+}
+#navHeader .active{
+  position: absolute;
+  width: 100%;
+  left: 0px;
+  top: 72px;
+  background-color: hsl(9, 100%, 90%);
+  z-index:1;
 }
 #navHeader a{
   display:block;
@@ -69,11 +93,21 @@ body{
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  margin-bottom:24px;
 }
 #slideshow > img{
 	display:block;
   max-width:803px;
   margin:0 auto;
+}
+#title{
+  position: relative;
+  top: 25%;
+  font-size: 21px;
+  text-shadow: -1px -1px 0px hsl(0, 0%, 100%), -1px 1px 0px hsl(0, 0%, 100%), 1px -1px 0px hsl(0, 0%, 100%), 1px 1px 0px hsl(0, 0%, 100%);
+}
+#title > h1{
+  text-transform: uppercase;
 }
 #intro{
 	max-width:900px;
@@ -162,15 +196,22 @@ input,textarea{
 }
 @media (min-width: 775px) {
 #header{
-  text-align:left;
+
 }
 #logo > div{
   padding:0;
 }
+#menuButton{
+  display:none;
+}
 #navHeader{
+  display:block;
   float:right;
 }
 #navHeader li{
   display:inline-block;
+}
+#title{
+  font-size:24px;
 }
 }
