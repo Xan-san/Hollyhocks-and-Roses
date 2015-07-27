@@ -69,7 +69,8 @@ body{
   display:none;
   text-align:center;
 }
-#navHeader .active{
+#navHeader.active{
+  display:block;
   position: absolute;
   width: 100%;
   left: 0px;
