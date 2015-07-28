@@ -57,7 +57,7 @@ body{
   float:right;
   padding:12px 15px;
   display: inline-block;
-  border: 2px solid hsl(103, 56%, 26%);
+  /* border: 2px solid hsl(103, 56%, 26%); */
   text-transform: uppercase;
   border-radius: 5px;
   cursor:pointer;
