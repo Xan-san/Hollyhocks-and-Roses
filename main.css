@@ -61,9 +61,11 @@ body{
   text-transform: uppercase;
   border-radius: 5px;
   cursor:pointer;
+  transition:color 0.2s linear,background-color 0.2s linear;
 }
 #menuButton:hover{
-
+  color:hsl(0,0%,100%);
+  background-color:hsl(95, 49%, 36%);
 }
 #navHeader{
   display:none;
