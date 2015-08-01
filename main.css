@@ -35,6 +35,9 @@ body{
 	padding:12px;
   text-align:left;
   /* font-weight:bold; */
+  position:fixed;
+  width:100%;
+  box-sizing:border-box;
 }
 #logo{
   display:inline-block;
