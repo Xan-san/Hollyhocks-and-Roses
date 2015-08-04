@@ -145,7 +145,10 @@ function hasClass(elem, className) {
 
 // toggleClass
 function toggleClass(elem, className) {
-  var newClass = ' ' + elem.className.replace(/[\t\r\n\f]/g, ' ') + ' ';
+  if (elem.classList) {
+  elem.classList.toggle(className);
+  } else {
+    var newClass = ' ' + elem.className.replace(/[\t\r\n\f]/g, ' ') + ' ';
     if (hasClass(elem, className)) {
         while (newClass.indexOf(' ' + className + ' ') >= 0 ) {
             newClass = newClass.replace(' ' + className + ' ', ' ');
@@ -154,8 +157,9 @@ function toggleClass(elem, className) {
     } else {
         elem.className += ' ' + className;
     }
+  }
 }
-//add event listener on click to run toggleMenu function
+//add event listener on click to run toggleClass function
   $menuButton.addEventListener('click', function(){toggleClass($navHeader,'active');});
 </script>
 </body>
