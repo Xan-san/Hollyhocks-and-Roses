@@ -131,6 +131,7 @@
   </div>
 <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script> -->
 <script>
+//Mobile menu button toggle
 //cache DOM elements
   var $menuButton = document.getElementById('menuButton');
   var $navHeader = document.getElementById('navHeader');
@@ -142,7 +143,6 @@
 function hasClass(elem, className) {
   return new RegExp(' ' + className + ' ').test(' ' + elem.className + ' ');
 }
-
 // toggleClass
 function toggleClass(elem, className) {
   if (elem.classList) {
@@ -161,6 +161,39 @@ function toggleClass(elem, className) {
 }
 //add event listener on click to run toggleClass function
   $menuButton.addEventListener('click', function(){toggleClass($navHeader,'active');});
+//Change header background when scrolled below hero image
+//cache DOM elements
+var $header = document.getElementById('header');
+var $slideshow = document.getElementById('slideshow');
+//calculate height of hero image
+var slideshowHeight = getComputedStyle($slideshow).height.split('px')[0];
+//add class
+var addClass = function(el,className){
+  if (el.classList){
+    el.classList.add(className);
+  }else{
+    el.className += ' ' + className;
+  }
+}
+//remove class
+var removeClass = function(el,className){
+  if (el.classList){
+    el.classList.remove(className);
+  }else{
+    el.className = el.className.replace(new RegExp('(^|\\b)' + className.split(' ').join('|') + '(\\b|$)', 'gi'), ' ');
+  }
+}
+//conditional scroll position
+var headerScroll = function(){
+   if(window.pageYOffset>slideshowHeight){
+    addClass($header,'headerBG');
+  }
+  if(window.pageYOffset<slideshowHeight){
+    removeClass($header,'headerBG');
+  }
+}
+//scroll event
+window.addEventListener('scroll', headerScroll, false);
 </script>
 </body>
 </html>

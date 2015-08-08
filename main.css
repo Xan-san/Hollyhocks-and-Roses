@@ -31,7 +31,6 @@ body{
   font-weight:bold;
 }
 #header{
-	background-color: hsl(9, 100%, 90%);
 	padding:12px;
   text-align:left;
   /* font-weight:bold; */
@@ -39,6 +38,10 @@ body{
   width:100%;
   box-sizing:border-box;
   z-index:1;
+  transition:background-color 0.2s linear;
+}
+.headerBG{
+  background-color: hsl(9, 100%, 90%);
 }
 #logo{
   display:inline-block;
